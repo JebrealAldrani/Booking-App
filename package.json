@@ -12,7 +12,7 @@
   "dependencies": {
     "@lucia-auth/adapter-sqlite": "^3.0.2",
     "@types/luxon": "^3.7.1",
-    "better-sqlite3": "^12.2.0",
+    "better-sqlite3": "^11.10.0",
     "cloudinary": "^2.7.0",
     "lucia": "^3.2.2",
     "luxon": "^3.7.1",
