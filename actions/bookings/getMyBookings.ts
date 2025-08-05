@@ -44,7 +44,7 @@ const parseBookings =  bookings.map((booking: any) => ({
   } catch (error) {
     console.log('Failed to get user bookings');
     return {
-      error: 'Failed to get'
+      error: 'Failed to get bookings'
     }
   }
 
