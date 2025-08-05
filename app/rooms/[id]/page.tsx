@@ -4,8 +4,9 @@ import Image from "next/image";
 import { FaChevronLeft } from "react-icons/fa";
 import BookingForm from "@/components/BookingForm";
 import getSingleRoom from "@/actions/Rooms/getSingleRoom";
+import { NextPage } from "next";
 
-const RoomPage = async ({ params }: { params: { id: string } }) => {
+const RoomPage: NextPage<{ params: { id: string } }> = async ({ params }) => {
   const { id } = await params;
 
   const room = await getSingleRoom(id);

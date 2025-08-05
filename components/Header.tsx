@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import Image from "next/image";
-import logo from "@/assets/images/logo.svg";
+import logo from "@/public/logo.svg";
 import { FaUser, FaSignInAlt, FaBuilding } from "react-icons/fa";
 import LogoutButton from "./Logout";
 import { useAuth } from "@/context/authContext";
