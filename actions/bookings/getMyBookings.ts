@@ -44,6 +44,7 @@ const parseBookings =  bookings.map((booking: any) => ({
   return parseBookings as bookingInterface[];
   } catch (error) {
     console.log('Failed to get user bookings');
+    return []
   }
 
  
