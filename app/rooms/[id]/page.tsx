@@ -6,13 +6,8 @@ import BookingForm from "@/components/BookingForm";
 import getSingleRoom from "@/actions/Rooms/getSingleRoom";
 import { NextPage } from "next";
 
-interface PageProps {
-  params: {
-    id: string;
-  };
-}
 
-const RoomPage = async ({ params }: PageProps) => {
+const RoomPage = async ({ params }: any) => {
   const { id } = params;
 
   const room = await getSingleRoom(id);
