@@ -7,7 +7,7 @@ import getSingleRoom from "@/actions/Rooms/getSingleRoom";
 import { NextPage } from "next";
 
 const RoomPage: NextPage<{ params: { id: string } }> = async ({ params }) => {
-  const { id } = await params;
+  const { id } = params;
 
   const room = await getSingleRoom(id);
 
