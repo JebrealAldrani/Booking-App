@@ -1,4 +1,5 @@
 
+import { bookingInterface } from "@/interfaces/booking";
 import { verifyAuth } from "@/lib/auth";
 import db from "@/lib/db"
 
@@ -40,12 +41,9 @@ const parseBookings =  bookings.map((booking: any) => ({
   room: JSON.parse(booking.room),
 }));
 
-  return parseBookings
+  return parseBookings as bookingInterface[];
   } catch (error) {
     console.log('Failed to get user bookings');
-    return {
-      error: 'Failed to get bookings'
-    }
   }
 
  
