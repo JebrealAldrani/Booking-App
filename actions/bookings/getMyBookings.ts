@@ -2,6 +2,7 @@
 import { bookingInterface } from "@/interfaces/booking";
 import { verifyAuth } from "@/lib/auth";
 import db from "@/lib/db"
+import { redirect } from "next/navigation";
 
 const getMyBookings = async () => {
 
@@ -9,9 +10,7 @@ const getMyBookings = async () => {
      const { user } = await verifyAuth();
 
   if(!user?.id) {
-    return {
-      error: 'You must be logged in to view bookings'
-    }
+    redirect('/login')
   }
 
   //Fetch user bookings

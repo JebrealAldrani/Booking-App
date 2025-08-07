@@ -10,9 +10,9 @@ const RoomCard: React.FC<{ room: roomInterface }> = async ({ room }) => {
     user?.id === "1b57ff7c-c23a-4492-81ad-7cd7b323a957" ? true : false;
 
   //Extract image key
-  const imageUrl = room.image;
-  const imageName = imageUrl.split("/");
-  const imageKey = imageName[imageName.length - 1].split(".")[0];
+  // const imageUrl = room.image;
+  // const imageName = imageUrl.split("/");
+  // const imageKey = imageName[imageName.length - 1].split(".")[0];
 
   return (
     <div className="bg-white shadow rounded-lg p-4 mt-4 flex flex-col sm:flex-row justify-between items-start sm:items-center">
@@ -21,7 +21,7 @@ const RoomCard: React.FC<{ room: roomInterface }> = async ({ room }) => {
           src={room.image}
           width={400}
           height={100}
-          alt="Grand Conference Hall"
+          alt={room.name}
           className="w-full sm:w-32 sm:h-32 mb-3 sm:mb-0 object-cover rounded-lg"
         />
         <div className="space-y-1">
@@ -49,7 +49,7 @@ const RoomCard: React.FC<{ room: roomInterface }> = async ({ room }) => {
         </Link>
         {/* Just Appear For Admin */}
         {Admin && (
-          <DeleteRoomBtn key={room.id} roomId={room.id} imageKey={imageKey}/>
+          <DeleteRoomBtn key={room.id} roomId={room.id} imageKey={room.image.split("/").pop()?.split(".")[0] || ""}/>
         )}
       </div>
     </div>
